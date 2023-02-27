@@ -1,24 +1,20 @@
 import {
   Box,
-  Stack,
   Flex,
-  Image,
-  Text,
-  Button,
   Popover,
   PopoverArrow,
-  PopoverBody,
   PopoverCloseButton,
   PopoverContent,
-  PopoverFooter,
   PopoverHeader,
   PopoverTrigger,
   Portal,
+  Stack,
+  Text,
 } from "@chakra-ui/core";
 import React, { useEffect, useState } from "react";
+import night from "../images/night.png";
 import { DataType, DayType, TimeType } from "../types";
 import { Chart } from "./Chart";
-import night from "../images/night.png";
 
 interface WeatherCardProps {
   address: string;
@@ -60,7 +56,7 @@ export const WeatherCard: React.FC<WeatherCardProps> = ({
             <img
               src={image ? image.default.src : null}
               alt={night.src}
-              style={{ width: "100px" }}
+              style={{ height: "75px", maxWidth: "100px" }}
             />
           </PopoverTrigger>
           <Portal>

@@ -46,6 +46,11 @@ export const Form: React.FC<FormProps> = ({
               <Input
                 border={"1px"}
                 borderColor={errors ? "tomato" : ""}
+                onKeyDown={(e) => {
+                  if (e.keyCode == 13 && address) {
+                    setSaved(!saved);
+                  }
+                }}
                 onChange={(e) => {
                   setAddress(e.target.value);
                 }}
