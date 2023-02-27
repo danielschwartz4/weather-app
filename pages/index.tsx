@@ -30,20 +30,16 @@ const IndexPage = () => {
         setErrors(true);
         return;
       }
-      console.log("YOOYOY", weatherData1);
       const res1 = await weatherData1.json();
       const res2 = await weatherData2.json();
       const chartData1 = buildData(res1, time);
       const chartData2 = buildData(res2, time);
-      console.log(res1);
       setData([chartData1, chartData2]);
       setLoading(false);
       setErrors(false);
     };
     fetchData();
   }, [saved, day, time, itemsIdx]);
-
-  console.log(errors);
 
   return (
     <Box

@@ -65,8 +65,3 @@ export const Chart: React.FC<ChartProps> = ({ data }) => {
     </Box>
   );
 };
-
-const CustomTooltip = ({ active, payload, label }) => {
-  console.log(active, payload, label);
-  return <Box>hello</Box>;
-};
